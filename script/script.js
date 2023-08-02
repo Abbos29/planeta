@@ -1,48 +1,82 @@
-// Мобильное меню бургер
-function burgerMenu() {
-  const burger = document.querySelector('.burger')
-  const menu = document.querySelector('.menu')
-  const body = document.querySelector('body')
-  burger.addEventListener('click', () => {
-    if (!menu.classList.contains('active')) {
-      menu.classList.add('active')
-      burger.classList.add('active-burger')
-      body.classList.add('locked')
-    } else {
-      menu.classList.remove('active')
-      burger.classList.remove('active-burger')
-      body.classList.remove('locked')
+
+// MAGNIFIC
+
+$(document).ready(function() {
+  // Инициализируем Magnific Popup
+  $('.popup-link').magnificPopup({
+    type: 'inline',
+    closeMarkup: '<button title="%title%" class="mfp-close">×</button>'
+  });
+
+  // Функция для открытия модального окна 1
+  $('#btn1').on('click', function() {
+    $.magnificPopup.open({
+      items: {
+        src: '#modal1'
+      },
+      type: 'inline'
+    });
+  });
+
+  // Функция для открытия модального окна 2
+  $('#btn2').on('click', function() {
+    $.magnificPopup.open({
+      items: {
+        src: '#modal2'
+      },
+      type: 'inline'
+    });
+  });
+
+});
+
+
+
+
+
+// TABS
+
+function tabs(headerSelector, tabSelector, contentSelector, activeClass, display = 'flex') {
+  const headers = document.querySelectorAll(headerSelector);
+
+  headers.forEach((header) => {
+    const tabs = header.querySelectorAll(tabSelector);
+    const contents = header.parentElement.querySelectorAll(contentSelector);
+
+    function hideTabContent() {
+      contents.forEach((item) => {
+        item.style.display = 'none';
+      });
+      tabs.forEach((item) => {
+        item.classList.remove(activeClass);
+      });
     }
-  })
-  menu.addEventListener("click", (event) => {
-    if(event.target){
-      menu.classList.remove('active')
-      burger.classList.remove('active-burger')
-      body.classList.remove('locked')
+
+    function showTabContent(i = 0) {
+      contents[i].style.display = display;
+      tabs[i].classList.add(activeClass);
     }
-  })
-  // Вот тут мы ставим брейкпоинт навбара
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 991.98) {
-      menu.classList.remove('active')
-      burger.classList.remove('active-burger')
-      body.classList.remove('locked')
-    }
-  })
+
+    hideTabContent();
+    showTabContent();
+
+    header.addEventListener('click', (e) => {
+      const target = e.target;
+
+      if (
+        target.classList.contains(tabSelector.replace(/\./, '')) ||
+        target.parentNode.classList.contains(tabSelector.replace(/\./, ''))
+      ) {
+        tabs.forEach((item, i) => {
+          if (target == item || target.parentNode == item) {
+            hideTabContent();
+            showTabContent(i);
+          }
+        });
+      }
+    });
+  });
 }
-burgerMenu()
 
-
-// Вызываем эту функцию, если нам нужно зафиксировать меню при скролле.
-function fixedNav() {
-  const nav = document.querySelector('nav')
-
-  // тут указываем в пикселях, сколько нужно проскроллить что бы наше меню стало фиксированным
-  const breakpoint = 1
-  if (window.scrollY >= breakpoint) {
-    nav.classList.add('fixed__nav')
-  } else {
-    nav.classList.remove('fixed__nav')
-  }
-}
-window.addEventListener('scroll', fixedNav)
+// Пример использования:
+tabs('.tabs__header', '.tabs__header-item', '.tabs__content-item', 'active');

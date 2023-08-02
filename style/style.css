@@ -32,6 +32,7 @@ section {
   align-items: center;
   justify-content: center;
   border-radius: 12px;
+  cursor: pointer;
   transition: all 0.3s;
 }
 .btn:hover {
@@ -261,7 +262,8 @@ section {
   padding: 15px 0 10px;
 }
 .grid__item-price span {
-  text-decoration-line: line-through;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
   font-size: 20px;
   color: #D2D2D2;
 }
@@ -319,5 +321,157 @@ section {
   font-size: clamp(0.875rem, 0.263rem + 0.99vw, 1.25rem);
 }
 .footer__text.policy {
+  color: #8FD831;
+}
+
+.tabs {
+  width: 100%;
+}
+.tabs__header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 12px;
+}
+@media (max-width: 480px) {
+  .tabs__header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+.tabs__header-item {
+  cursor: pointer;
+}
+.tabs__header-item.active {
+  color: #252931;
+  background: #ECECEC;
+}
+.tabs__content {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tabs__content-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-form {
+  max-width: 100%;
+  min-width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+.contact-form label {
+  padding-bottom: 4px;
+}
+
+input[type=text], textarea {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  outline: none;
+  max-width: 100%;
+  margin-bottom: 12px;
+  border: 2px solid #252931;
+  border-radius: 12px;
+  padding: 10px 18px;
+  transition: all 0.4s;
+}
+input[type=text]::-moz-placeholder, textarea::-moz-placeholder {
+  color: #fff;
+}
+input[type=text]:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #fff;
+}
+input[type=text]::placeholder, textarea::placeholder {
+  color: #fff;
+}
+
+input[type=text]:focus, textarea:focus {
+  transition: all 0.4s;
+}
+
+button[type=submit] {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+button[type=submit]:hover {
+  color: #FFF;
+}
+
+button[type=submit]:active {
+  transition: all 0.2s;
+  top: 3px;
+}
+
+button[type=submit]:focus {
+  position: relative;
+  transition: all 0.2s;
+  outline: none;
+}
+
+.modal {
+  position: relative;
+  max-width: 650px;
+  width: 100%;
+  margin: 0 auto;
+}
+.modal__wrapper {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background: #fff;
+  padding: clamp(0.75rem, 0.151rem + 2.66vw, 2.813rem);
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.modal__btn {
+  cursor: pointer;
+}
+.modal__title {
+  font-weight: 500;
+  font-size: clamp(1.125rem, 1.016rem + 0.48vw, 1.5rem);
+}
+.modal__pretitle {
+  font-weight: 600;
+  font-size: 20px;
+  padding-bottom: 8px;
+}
+.modal__content-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 12px;
+  margin: 15px 0;
+}
+@media (max-width: 480px) {
+  .modal__content-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+.modal__text {
+  font-size: 14px;
+}
+.modal__policy {
+  padding-top: 30px;
+}
+@media (max-width: 480px) {
+  .modal__policy {
+    font-size: 14px;
+  }
+}
+.modal__policy a {
   color: #8FD831;
 }/*# sourceMappingURL=style.css.map */

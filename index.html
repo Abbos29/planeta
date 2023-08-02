@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="./magnific/magnific-popup.css">
+
     <link rel="icon" href="./img/favicon.svg">
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/style.css">
@@ -32,7 +34,7 @@
                 <ul class="navbar__menu">
                     <li class="navbar__menu-item"><p>Звоните нам</p></li>
                     <li class="navbar__menu-item item-tel"><a href="#" style="color: #3498DB">8 800 638-28-28</a></li>
-                    <li class="navbar__menu-item"><a class="btn" href="#">Оставить заявку</a></li>
+                    <li class="navbar__menu-item"><a id="btn2" class="btn modal__btn">Оставить заявку</a></li>
                 </ul>
             </div>
         </div>
@@ -48,7 +50,7 @@
             <div class="hero__item">
                 <h1 class="hero__title">Экологичные еврокубы для хранения и транспортировки</h1>
                 <p class="hero__subtitle">Гарантия высокого качества</p>
-                <a class="hero__btn btn" href="#">Смотреть кубы</a>
+                <a id="btn1" class="hero__btn btn modal__btn">Смотреть кубы</a>
             </div>
 
             <div class="hero__img">
@@ -211,8 +213,99 @@
     </div>
 </footer>
 
+<!-- MODALS -->
+
+
+<div id="modal1" class="modal mfp-hide">
+    <div class="modal__wrapper">
+        <div class="modal__top">
+            <p class="modal__title">Еврокуб Werit белый 600 л</p>
+            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+        </div>
+    
+        <div class="modal__content">
+            <img class="grid__item-img" src="./img/item-1.jpg" alt="img">
+            <div class="modal__content-inner">
+                <p class="grid__item-price">4 000 ₽ <span>6 000 ₽</span></p>
+                <a class="modal__content-btn btn">Оставить заявку</a>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <div class="tabs__header">
+                    <div class="tabs__header-item active btn">Характеристики</div>
+                    <div class="tabs__header-item btn">Приминение</div>
+                </div>
+                <div class="tabs__content">
+                    <div class="tabs__content-item">
+                        <p class="modal__pretitle">Характеристики:</p>
+                        <p class="modal__text">
+                            Еврокуб 600 л б/у из-под грунтовки по дереву, в хорошем состоянии. <br><br>
+                            Цвет: белый <br><br>
+                            Поддон: деревянный <br><br>
+                            Пластик: пищевой (с маркеровкой) <br><br>
+                            Производство: Германия <br><br>
+                            Есть мерная шкала <br><br>
+                            Заливная горловина: 400 мм, на хомуте <br><br>
+                            Сливной кран: 80 мм <br><br>
+                            Габариты: длина 1.20 м, ширина 0.8 м, высота 1 м <br><br>
+                            Вес: 48 кг <br><br>
+                            Отмывается: водой
+                        </p>
+                    </div>
+                    <div class="tabs__content-item">
+                        <p class="modal__pretitle">Применение:</p>
+                        <p class="modal__text">
+                            — на даче (душ, полив, садовый водопровод, септик, сбор дождевой воды); <br><br>
+                            — контейнер для мусора; <br><br>
+                            — транспортировка и хранение жидкостей; <br><br>
+                            — хранение ГСМ, нефтепродуктов, масла; <br><br>
+                            — создание купели (русская баня); <br><br>
+                            — для разведения рыбы и выращивания зелени, овощей и цветов; <br><br>
+                            — для организации заправочных модулей (мобильная мини-АЗС); <br><br>
+                            — аквапоника и гидропоника; <br><br>
+                            — для термической обработки субстрата (выращивания грибов типа вешенки); <br><br>
+                            — в шоу-бизнесе (для создания световых декораций и стен).
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div id="modal2" class="modal mfp-hide">
+    <div class="modal__wrapper">
+        <div class="modal__top">
+            <p class="modal__title">Оставить заявку</p>
+            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+        </div>
+    
+        <div class="modal__content">
+
+            <form class="contact-form" id="contact-form" method="post" action="send.php" onsubmit="return validate_form ( );">
+                <label>Имя</label>
+                <input name="name" type="text" placeholder="Name" required/>
+
+                <label>Телефон</label>
+                <input name="phone" type="text" placeholder="Phone" required/>
+
+                <button class="btn" type="submit">Оставить заявку</button>
+            </form>
+
+            <p class="modal__policy">Нажимая кнопку «Отправить» вы автоматически даёте своё согласие <a href="#">с политикой обработки персональных данных</a></p>
+
+        </div>
+    </div>
+</div>
+
+
 </body>
 
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="./magnific/jquery.magnific-popup.js"></script>
 <script src="./script/script.js"></script>
 
 </html>
