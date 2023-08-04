@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
@@ -33,6 +37,7 @@ section {
   justify-content: center;
   border-radius: 12px;
   cursor: pointer;
+  font-size: clamp(0.875rem, 0.657rem + 0.97vw, 1.625rem);
   transition: all 0.3s;
 }
 .btn:hover {
@@ -260,6 +265,7 @@ section {
   align-items: flex-start;
   gap: 10px;
   padding: 15px 0 10px;
+  margin-top: auto;
 }
 .grid__item-price span {
   text-decoration-line: line-through;
@@ -268,7 +274,6 @@ section {
 }
 .grid__item-btn {
   background: #252931;
-  margin-top: auto;
 }
 
 .about__wrapper {
@@ -289,7 +294,7 @@ section {
 }
 .about__text {
   max-width: 790px;
-  font-size: clamp(0.875rem, 0.802rem + 0.32vw, 1.125rem);
+  font-size: clamp(1rem, 0.74rem + 1.15vw, 1.75rem);
 }
 .about__img img {
   max-width: 100%;
@@ -323,6 +328,9 @@ section {
 .footer__text.policy {
   color: #8FD831;
 }
+.footer .navbar__menu {
+  flex-direction: column;
+}
 
 .tabs {
   width: 100%;
@@ -343,8 +351,15 @@ section {
   cursor: pointer;
 }
 .tabs__header-item.active {
-  color: #252931;
-  background: #ECECEC;
+  color: #252931 !important;
+  background: #ECECEC !important;
+  cursor: default !important;
+}
+.tabs__header-item.btn {
+  background: #252931;
+  color: #fff;
+  border: 1px solid #0f1218;
+  cursor: pointer;
 }
 .tabs__content {
   margin-top: 30px;
@@ -421,6 +436,11 @@ button[type=submit]:focus {
   width: 100%;
   margin: 0 auto;
 }
+@media (min-width: 1300px) {
+  .modal {
+    max-width: 1300px;
+  }
+}
 .modal__wrapper {
   width: 100%;
   height: auto;
@@ -436,13 +456,31 @@ button[type=submit]:focus {
   cursor: pointer;
 }
 .modal__title {
-  font-weight: 500;
+  font-weight: 600;
   font-size: clamp(1.125rem, 1.016rem + 0.48vw, 1.5rem);
+  max-width: 80%;
 }
 .modal__pretitle {
   font-weight: 600;
   font-size: 20px;
   padding-bottom: 8px;
+}
+@media (min-width: 1300px) {
+  .modal__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 20px;
+    grid-template-areas: "grid__item-img tabs" "modal__content-inner tabs";
+  }
+  .modal__content .grid__item-img {
+    grid-area: grid__item-img;
+  }
+  .modal__content .modal__content-inner {
+    grid-area: modal__content-inner;
+  }
+  .modal__content .tabs {
+    grid-area: tabs;
+  }
 }
 .modal__content-inner {
   display: grid;
@@ -471,4 +509,12 @@ button[type=submit]:focus {
 }
 .modal__policy a {
   color: #8FD831;
+}
+
+#modalForm {
+  max-width: 650px !important;
+}
+#modalForm .modal__content {
+  grid-template-columns: 1fr;
+  grid-template-areas: none;
 }/*# sourceMappingURL=style.css.map */

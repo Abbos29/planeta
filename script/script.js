@@ -112,6 +112,45 @@ $(document).ready(function() {
 
 
 
+document.addEventListener("DOMContentLoaded", function() {
+  var btnFooter = document.getElementById("btnFooter");
+  var btnForm = document.getElementById("btnForm");
+  
+  btnFooter.addEventListener("click", function() {
+    setTimeout(function() {
+      btnForm.click();
+    }, 0);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  var btnFooter = document.getElementById("hero2-btn");
+  var btnForm = document.getElementById("btnForm");
+  
+  btnFooter.addEventListener("click", function() {
+    setTimeout(function() {
+      btnForm.click();
+    }, 0);
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var modalButtons = document.getElementsByClassName("modal__content-btn");
+  var btnForm = document.getElementById("btnForm");
+  
+  for (var i = 0; i < modalButtons.length; i++) {
+    modalButtons[i].addEventListener("click", function() {
+      setTimeout(function() {
+        btnForm.click();
+      }, 0);
+    });
+  }
+});
+
+
+
+
 
 // TABS
 
