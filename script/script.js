@@ -8,7 +8,15 @@ $(document).ready(function() {
     closeMarkup: '<button title="%title%" class="mfp-close">×</button>'
   });
 
-  // Функция для открытия модального окна 1
+  $('#btnForm').on('click', function() {
+    $.magnificPopup.open({
+      items: {
+        src: '#modalForm'
+      },
+      type: 'inline'
+    });
+  });
+
   $('#btn1').on('click', function() {
     $.magnificPopup.open({
       items: {
@@ -18,11 +26,82 @@ $(document).ready(function() {
     });
   });
 
-  // Функция для открытия модального окна 2
   $('#btn2').on('click', function() {
     $.magnificPopup.open({
       items: {
         src: '#modal2'
+      },
+      type: 'inline'
+    });
+  });
+
+  $('#btn3').on('click', function() {
+    $.magnificPopup.open({
+      items: {
+        src: '#modal3'
+      },
+      type: 'inline'
+    });
+  });
+
+  $('#btn4').on('click', function() {
+    $.magnificPopup.open({
+      items: {
+        src: '#modal4'
+      },
+      type: 'inline'
+    });
+  });
+
+  $('#btn5').on('click', function() {
+    $.magnificPopup.open({
+      items: {
+        src: '#modal5'
+      },
+      type: 'inline'
+    });
+  });
+
+  $('#btn6').on('click', function() {
+    $.magnificPopup.open({
+      items: {
+        src: '#modal6'
+      },
+      type: 'inline'
+    });
+  });
+
+  $('#btn7').on('click', function() {
+    $.magnificPopup.open({
+      items: {
+        src: '#modal7'
+      },
+      type: 'inline'
+    });
+  });
+
+  $('#btn8').on('click', function() {
+    $.magnificPopup.open({
+      items: {
+        src: '#modal8'
+      },
+      type: 'inline'
+    });
+  });
+
+  $('#btn9').on('click', function() {
+    $.magnificPopup.open({
+      items: {
+        src: '#modal9'
+      },
+      type: 'inline'
+    });
+  });
+
+  $('#btn10').on('click', function() {
+    $.magnificPopup.open({
+      items: {
+        src: '#modal10'
       },
       type: 'inline'
     });

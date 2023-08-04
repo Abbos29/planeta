@@ -333,6 +333,7 @@ section {
     // .grid__item-btn
     &__item-btn {
         background: #252931;
+        margin-top: auto;
     }
 }
 
@@ -463,7 +464,7 @@ section {
     &__content {
         margin-top: 30px;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
     }
 

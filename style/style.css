@@ -262,13 +262,13 @@ section {
   padding: 15px 0 10px;
 }
 .grid__item-price span {
-  -webkit-text-decoration-line: line-through;
-          text-decoration-line: line-through;
+  text-decoration-line: line-through;
   font-size: 20px;
   color: #D2D2D2;
 }
 .grid__item-btn {
   background: #252931;
+  margin-top: auto;
 }
 
 .about__wrapper {
@@ -349,7 +349,7 @@ section {
 .tabs__content {
   margin-top: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 .tabs__content-item {
@@ -381,9 +381,6 @@ input[type=text], textarea {
   transition: all 0.4s;
 }
 input[type=text]::-moz-placeholder, textarea::-moz-placeholder {
-  color: #fff;
-}
-input[type=text]:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #fff;
 }
 input[type=text]::placeholder, textarea::placeholder {
