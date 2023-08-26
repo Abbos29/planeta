@@ -167,6 +167,9 @@ const swiperModal = new Swiper('.swiper-modal', {
     prevEl: '.swiper-button-prev',
   },
 
+  autoplay: {
+    delay: 2000,
+   },
   slidesPerView: 1,
   spaceBetween: 20,
 

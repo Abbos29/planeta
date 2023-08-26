@@ -259,7 +259,15 @@ section {
     }
 }
 
+.item-tel-new {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
 
+    @media (max-width: 480px) {
+        display: block;
+    }
+}
 
 
 
@@ -648,6 +656,24 @@ button[type=submit]:focus{
         }
         a {
             color: $greenMain;
+        }
+    }
+
+
+    &__simple-text {
+        display: block;
+        margin-top: auto;
+        font-size: 19px;
+        font-weight: 600;
+        margin-top: 30px;
+
+        a {
+            text-decoration: underline;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 16px;
         }
     }
 
