@@ -5,10 +5,10 @@ $name = $_POST['name'];
 $phone = $_POST['phone'];
 // $text = $_POST['textarea'];
 
-$token = "6187146406:AAGFmR-7k6E7HpqFHjN8neF6ZngWwPpRr5w"; // Токен телеграм бота
+$token = "6471045633:AAFxmPYvNmQ1hPWYyPrjoUwFZjr37a-qOX8"; // Токен телеграм бота
 
 
-$chat_id = "-1001950861223";  // Идентификатор чата
+$chat_id = "-1001887287395";  // Идентификатор чата
 // $chat_id2 = "CHAT_ID2";  // Дополнительный идентификатор чата
 
 $arr = array(

@@ -517,4 +517,12 @@ button[type=submit]:focus {
 #modalForm .modal__content {
   grid-template-columns: 1fr;
   grid-template-areas: none;
+}
+
+.swiper-modal {
+  max-width: 100%;
+  width: 100%;
+}
+.swiper-modal .grid__item-img {
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */

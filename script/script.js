@@ -1,14 +1,14 @@
 
 // MAGNIFIC
 
-$(document).ready(function() {
+$(document).ready(function () {
   // Инициализируем Magnific Popup
   $('.popup-link').magnificPopup({
     type: 'inline',
     closeMarkup: '<button title="%title%" class="mfp-close">×</button>'
   });
 
-  $('#btnForm').on('click', function() {
+  $('#btnForm').on('click', function () {
     $.magnificPopup.open({
       items: {
         src: '#modalForm'
@@ -17,7 +17,7 @@ $(document).ready(function() {
     });
   });
 
-  $('#btn1').on('click', function() {
+  $('#btn1').on('click', function () {
     $.magnificPopup.open({
       items: {
         src: '#modal1'
@@ -26,7 +26,7 @@ $(document).ready(function() {
     });
   });
 
-  $('#btn2').on('click', function() {
+  $('#btn2').on('click', function () {
     $.magnificPopup.open({
       items: {
         src: '#modal2'
@@ -35,7 +35,7 @@ $(document).ready(function() {
     });
   });
 
-  $('#btn3').on('click', function() {
+  $('#btn3').on('click', function () {
     $.magnificPopup.open({
       items: {
         src: '#modal3'
@@ -44,7 +44,7 @@ $(document).ready(function() {
     });
   });
 
-  $('#btn4').on('click', function() {
+  $('#btn4').on('click', function () {
     $.magnificPopup.open({
       items: {
         src: '#modal4'
@@ -53,7 +53,7 @@ $(document).ready(function() {
     });
   });
 
-  $('#btn5').on('click', function() {
+  $('#btn5').on('click', function () {
     $.magnificPopup.open({
       items: {
         src: '#modal5'
@@ -62,7 +62,7 @@ $(document).ready(function() {
     });
   });
 
-  $('#btn6').on('click', function() {
+  $('#btn6').on('click', function () {
     $.magnificPopup.open({
       items: {
         src: '#modal6'
@@ -71,7 +71,7 @@ $(document).ready(function() {
     });
   });
 
-  $('#btn7').on('click', function() {
+  $('#btn7').on('click', function () {
     $.magnificPopup.open({
       items: {
         src: '#modal7'
@@ -80,7 +80,7 @@ $(document).ready(function() {
     });
   });
 
-  $('#btn8').on('click', function() {
+  $('#btn8').on('click', function () {
     $.magnificPopup.open({
       items: {
         src: '#modal8'
@@ -89,7 +89,7 @@ $(document).ready(function() {
     });
   });
 
-  $('#btn9').on('click', function() {
+  $('#btn9').on('click', function () {
     $.magnificPopup.open({
       items: {
         src: '#modal9'
@@ -98,7 +98,7 @@ $(document).ready(function() {
     });
   });
 
-  $('#btn10').on('click', function() {
+  $('#btn10').on('click', function () {
     $.magnificPopup.open({
       items: {
         src: '#modal10'
@@ -112,41 +112,80 @@ $(document).ready(function() {
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   var btnFooter = document.getElementById("btnFooter");
   var btnForm = document.getElementById("btnForm");
-  
-  btnFooter.addEventListener("click", function() {
-    setTimeout(function() {
+
+  btnFooter.addEventListener("click", function () {
+    setTimeout(function () {
       btnForm.click();
     }, 0);
   });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   var btnFooter = document.getElementById("hero2-btn");
   var btnForm = document.getElementById("btnForm");
-  
-  btnFooter.addEventListener("click", function() {
-    setTimeout(function() {
+
+  btnFooter.addEventListener("click", function () {
+    setTimeout(function () {
       btnForm.click();
     }, 0);
   });
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   var modalButtons = document.getElementsByClassName("modal__content-btn");
   var btnForm = document.getElementById("btnForm");
-  
+
   for (var i = 0; i < modalButtons.length; i++) {
-    modalButtons[i].addEventListener("click", function() {
-      setTimeout(function() {
+    modalButtons[i].addEventListener("click", function () {
+      setTimeout(function () {
         btnForm.click();
       }, 0);
     });
   }
 });
+
+
+
+
+
+
+
+// SWIPER
+
+const swiperModal = new Swiper('.swiper-modal', {
+
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  slidesPerView: 1,
+  spaceBetween: 20,
+
+  breakpoints: {
+    1450: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+    },
+    992: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 1,
+    }
+  }
+});
+
+
+
 
 
 
