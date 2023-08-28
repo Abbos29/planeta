@@ -29,8 +29,12 @@ section {
 .container {
     max-width: 1600px;
     width: 100%;
-    padding: 0 15px;
+    padding: 0 30px;
     margin: 0 auto;
+
+    @media (max-width: 480px) {
+        padding: 0 15px;
+    }
 }
 .section-title {
     font-size: clamp(1.688rem, 1.306rem + 1.69vw, 3rem);
@@ -305,6 +309,8 @@ section {
         align-items: stretch;
         gap: 10px;
         color: #252931;
+
+        cursor: pointer;
     }
     // .grid__item-img
     &__item-img {

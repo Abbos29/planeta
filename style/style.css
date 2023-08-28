@@ -17,8 +17,13 @@ section {
 .container {
   max-width: 1600px;
   width: 100%;
-  padding: 0 15px;
+  padding: 0 30px;
   margin: 0 auto;
+}
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
 }
 
 .section-title {
@@ -253,6 +258,7 @@ section {
   align-items: stretch;
   gap: 10px;
   color: #252931;
+  cursor: pointer;
 }
 .grid__item-img {
   max-width: 100%;
