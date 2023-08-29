@@ -160,6 +160,7 @@ const swiperModal = new Swiper('.swiper-modal', {
 
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
 
   navigation: {
@@ -172,6 +173,7 @@ const swiperModal = new Swiper('.swiper-modal', {
    },
   slidesPerView: 1,
   spaceBetween: 20,
+
 
   breakpoints: {
     1450: {

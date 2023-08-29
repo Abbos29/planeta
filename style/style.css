@@ -367,15 +367,15 @@ a {
   cursor: pointer;
 }
 .tabs__header-item.active {
-  color: #252931 !important;
-  background: #ECECEC !important;
-  cursor: default !important;
+  background: #252931 !important;
+  color: #fff !important;
+  cursor: pointer;
 }
 .tabs__header-item.btn {
-  background: #252931;
-  color: #fff;
-  border: 1px solid #0f1218;
-  cursor: pointer;
+  border: 1px solid #0f1218 !important;
+  color: #252931;
+  background: #ECECEC;
+  cursor: default !important;
 }
 .tabs__content {
   margin-top: 30px;
