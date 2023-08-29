@@ -25,9 +25,12 @@ body {
 section {
     padding: 35px 0;
 }
+a {
+    cursor: pointer;
+}
 
 .container {
-    max-width: 1600px;
+    max-width: 1300px;
     width: 100%;
     padding: 0 30px;
     margin: 0 auto;
@@ -238,14 +241,14 @@ section {
     .hero__img {
         position: relative;
         right: 0px;
-        top: -200px;
+        top: -120px;
         bottom: 0px;
         scale: 1;
 
         height: clamp(0rem, -27.533rem + 44.41vw, 16.875rem);
 
         @media (max-width: 1400px) {
-            top: -50px;
+            // top: -50px;
         }
 
         img {
